@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        .main {
+            height: 800px;
+            width: 100%;
+            background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(https://i0.wp.com/www.smartprix.com/bytes/wp-content/uploads/2022/11/netflix-india.jpeg?resize=1024,576&ssl=1);
+            background-size: cover;
+            border-bottom: 4px solid gray;
+        }
+
+        .logo img { 
+            height: 70px;
+            width: 200px;
+            padding-top: 20px;                                   
+        }
+
+        nav {
+            height: 100px;
+            width: calc(100% - 300px);
+            display: flex;
+            justify-content: space-between; 
+            align-items: center;
+            padding: 0px 150px;
+        }
+
+        button {
+            padding: 8px 14px;
+            background-color: red;
+            border: 1px solid black;
+            color: white; 
+            border-radius: 4px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        select {
+            background-color: transparent;
+            border: 1px solid grey;
+            padding: 7px 30px;
+            margin-right: 5px;
+            color: white;
+        }
+
+        option {
+            color: white;
+        }
+
+        .main1 {
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+            align-items: center;
+            text-align: center;
+            padding-top: 180px;
+        }
+
+        h1 {
+            font-size: 4rem;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            font-size: 1.5rem;
+        }
+
+        p {
+            font-size: 20px;
+            margin-top: 15px
+        }
+
+        input {
+            width: 400px;
+            height: 45px;
+            margin-top: 20px;
+            text-align: center;
+        }
+        
+        .main1 button {
+            height: 50px;
+            width: 200;
+        }
+
+        .main1 button:hover {
+            cursor: pointer;
+        }
+
+        .main2 {
+            height: 500px;
+            width: 100%;
+            display: flex;
+            border-bottom: 4px solid gray;
+        }
+
+        .left {
+            height: 100%;
+            width: 50%;
+            background-color: black;
+            color: white;
+            align-content: center;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+
+        .left h1 {
+            font-size: 3.5rem;
+            margin-top: -70px;
+            margin-left: 150px
+        }
+
+        .left p {
+            text-align: justify;
+            margin-left: 150px;
+            font-size: 1.4rem;
+            font-style: sans-serif;
+            font-size: 24px;
+        }
+
+        .right {
+            height: 100%;
+            width: 50%;
+            position: relative;
+        }
+
+        .main3 {
+            height: 500px;
+            width: 100%;
+            background-color: black;
+            display: flex;
+            border-bottom: 4px solid gray;
+        }
+
+        .right {
+            height: 100%;
+            width: 50%;
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+            align-content: center;
+        }
+
+        .right h1 {
+            font-size: 3.5rem;
+        }
+
+        .right p {
+            font-size: 25px;
+        }
+
+        .left {
+            height: 100%;
+            width: 50%;
+        }
+
+        .main2 .right video {
+            position: absolute;
+            right: 144px;
+            width: 420px;
+            height: 304px;
+            top: 37px;
+            object-fit: cover;
+        }
+
+        .main4 {
+            height: 500px;
+            width: 100%;
+            background-color: black;
+            display: flex;
+            border-bottom: 4px solid gray;
+        }
+
+        .main4 h1 {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 3.5rem;
+        }
+
+        .main5 {
+            height: 500px;
+            width: 100%;
+            background-color: black;
+            display: flex;
+            border-bottom: 4px solid gray;
+        }
+
+        .left {
+            height: 100%;
+            width: 50%;
+            padding-left: 40px;
+        }
+
+        .right {
+            height: 100%;
+            width: 50%;
+        }
+
+        .main6 {
+            height: 900px;
+            width: 100%;
+            background-color: black;
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+
+        }
+
+        .head h1 {
+            font-size: 3.2rem;
+            padding-top: 60px;
+            text-align: center;
+        }
+
+        .accordion {
+            max-width: 800px;
+            margin: auto;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+
+        .inner {
+            margin: 0;
+            position: relative;
+        }
+
+        .inner h1 {
+            background-color: gray;
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 22px;
+            padding: 15px;
+            margin: 0;
+            background-color: gray;
+            margin: 5px;
+
+        }
+
+        .inner p {
+            border: 1px solid gray;
+            margin: 0;
+            transform: translate(0px);
+            opacity: 0;
+            height: 0px;
+            transition: 1s;
+        }
+
+        .inner span {
+            position: absolute;
+            right: 50px;
+        }
+
+        .show {
+            padding: 20px 10px;
+            height: 60px !important;
+            transform: translateY(1) !important;
+            opacity: 1 !important;
+        }
+
+        p {
+            font-size: 20px;
+            margin-top: 15px
+        }
+
+        input {
+            width: 400px;
+            height: 45px;
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .main7 {
+            text-align: center;
+            position: relative;
+            top: 100px;
+        }
+
+        .main7 button {
+            height: 50px;
+            width: 200;
+        }
+
+        .main1 button:hover {
+            cursor: pointer;
+        }
+
+        .main8 {
+            height: 400px;
+            width: 100%;
+            background-color: black;
+            border-top: 5px solid gray;
+            margin-top: 250px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10vw;
+        }
+
+        .main8 p {
+            padding-left: 250px;
+            padding-top: 100px;
+        }
+
+        .boxes {
+            line-height: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <nav>
+            <div class="logo">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Netflix_2015_logo.svg/330px-Netflix_2015_logo.svg.png"
+                    height="60" width="200">
+            </div>
+            <div class="button">
+                <select name="" id="">
+                    <option value="">English</option>
+                    <option value="">Hindi</option>
+                </select>
+                <button> Sing In</button>
+            </div>
+        </nav>
+        <div class="main1">
+            <h1>Unlimited movies,TV <br>shows and more</h1>
+            <h2>Watch anywhere. cancel anytime.</h2><br>
+            <p> Ready to watch? Enter your email to create or restart your membership</p>
+            <input type="email" placeholder="Email Address" required>
+            <button type="submit">Get Started</button>
+        </div>
+    </div>
+    <div class="main2">
+        <div class="left">
+            <h1>Enjoy on your TV.</h1>
+            <p> Watch on smart TV, Playstation,Xbox<br>Chromecast,Apple TV, Blu-ray players and <br> more.</p>
+        </div>
+        <div class="right">
+            <img src="https://www.maketecheasier.com/assets/uploads/2019/09/home-theatre-buying-guide-netflix.jpg"
+                height="100%" width="100%">
+            <video src="https://videos.pexels.com/video-files/1933732/1933732-sd_640_360_25fps.mp4" autoplay loop
+                muted></video>
+        </div>
+    </div>
+    <div class="main3">
+        <div class="left"><img src="https://static.itavisen.no/wp-content/uploads/2020/04/wgegwewge.jpg" height="100%"
+                width="100%"></div>
+        <div class="right">
+            <h1>Download your shows <br>to watch offline.</h1>
+            <p>Save your favourites easily and always have <br> something to watch.</p>
+        </div>
+    </div>
+    <div class="main4">
+        <div class="left">
+            <h1>Watch everywhere.</h1>
+            <p>Stream unlimited moives and TV shows on your <br>phone,table,laptop,and TV.</p>
+        </div>
+        <div class="right"> <img src="feature-3.png" height="100%" width="100%">
+        </div>
+    </div>
+    <div class="main5">
+        <div class="left"> <img src="feature-4.png" height="100%" width="100%"></div>
+        <div class="right">
+            <h1>Create profiles for <br> children</h1>
+            <p> Send children on adventures with their <br> favourite characters in a space made just for <br> them-free
+                with your membership.</p>
+        </div>
+    </div>
+    <div class="main6">
+        <div class="head">
+            <h1>Frequently Asked Quetions</h1>
+        </div>
+        <div class="accordion">
+            <div class="inner">
+                <h1>What is Netflix? <span>+</span></h1> 
+                <p>Lorem, ipsum dolor sit amet consectetur Bhavik Sevak Is Thadipisicing elit. V
+                    corporis perspiciatis necessitatibus corrupti eius, incidu
+                    Architecto asperiores doloremque explicabo?</p>
+            </div>
+            <div class="inner">
+                <h1>How much does Netflix cost? <span>+</span></h1>
+                <p>
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                    omnis. Odit eius perspiciatis saepe dolore. Dignissimos au
+                    aliquam magni fugit animi!
+                </p>
+            </div>
+            <div class="inner">
+                <h1>Where can I watch? <span>+</span></h1>
+                <p>
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                    omnis. Odit eius perspiciatis saepe dolore. Dignissimos au
+                    aliquam
+                    magni fugit animi!
+                </p>
+            </div>
+            <div class="inner">
+                <h1>How do i cancel?<span>+</span></h1>
+                <p>
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                    omnis. Odit eius perspiciatis saepe dolore. Dignissimos au
+                    aliquam
+                    magni fugit animi!
+                </p>
+            </div>
+            <div class="inner">
+                <h1>What can i watch on Netflix?<span>+</span></h1>
+                <p>
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                    omnis. Odit eius perspiciatis saepe dolore. Dignissimos au
+                    aliquam
+                    magni fugit animi!
+                </p>
+            </div>
+            <div class="inner">
+                <h1>Is Netflix good for kids?<span>+</span></h1>
+                <p>
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                    omnis. Odit eius perspiciatis saepe dolore. Dignissimos au
+                    aliquam
+                    magni fugit animi!
+                </p>
+            </div>
+            <div class="main7">
+                <p> Ready to watch? Enter your email to create or restart your membership</p>
+                <input type="email" placeholder="Email Address" required>
+                <button type="submit">Get Started</button>
+            </div>
+        </div>
+        <div class="main8">
+            <div class="boxes box1">
+                <h5>FAQ</h5>
+                <h5>Investor Relations</h5>
+                <h5> Privacy</h5>
+                <h5>Speed Test</h5>
+            </div>
+            <div class="boxes box2">
+                <h5> Help Center</h5>
+                <h5> Jobs</h5>
+                <h5> Cookie Prefrences</h5>
+                <h5> Legal Notices</h5>
+            </div>
+            <div class="boxes box3">
+                <h5>Account</h5>
+                <h5> Ways To Watch</h5>
+                <h5> Corporate</h5>
+                <h5>Only On Netflix</h5>
+            </div>
+            <div class="boxes box4">
+                <h5> media Centre</h5>
+                <h5> Terms of User</h5>
+                <h5> Contact US</h5>
+            </div>
+        </div>
+        <script>
+            let h1 = document.querySelectorAll('h1')
+            let p = document.querySelectorAll('p')
+            h1.forEach((item) => {
+
+                item.addEventListener('click', function () {
+
+                    if (item.nextElementSibling.classList.contains('show')) {
+                        item.nextElementSibling.classList.remove('show')
+                    }
+                    else {
+                        p.forEach((p) => {
+                            p.classList.remove('show')
+                        })                                                               
+                        item.nextElementSibling.classList.add('show')
+                    }
+                })
+            })
+        </script>
+
+
+</body>
+
+
+</html>
